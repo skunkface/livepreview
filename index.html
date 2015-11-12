@@ -6,6 +6,38 @@
     <title>Live Preview Test</title>
     <meta name="description" content="Live Preview test app">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="candyBar/candyBar.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app/app.js"></script>
   </head>
+  <body>
+    <div class="frame">
+      <div ng-app="myApp"  ng-controller="namesCtrl">
+        <div class="bar-3">
+          <form novalidate>
+            First Name:<br>
+            <input type="text" ng-model="firstname"><br>
+            Last Name:<br>
+            <input type="text" ng-model="lastname"><br><br>
+            <button ng-click="update()">Update</button>
+          </form>
+          <ul>
+            <li ng-repeat="name in names">
+              <span>{{name.first}}</span>
+              <p>{{name.last}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="bar-2 display">
+          <div class="frame">
+            <ul class="bar-10">
+              <li ng-repeat="name in names">
+              {{name.first}} {{name.last}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
