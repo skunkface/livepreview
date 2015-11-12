@@ -5,10 +5,11 @@ myApp.controller('namesCtrl', function ($scope) {
 //    {'first': 'test',
 //    'last': 'fart',}
   ];
-  $scope.update = function() {
+  $scope.update = function () {
+    $scope.names.length = 0;
     $scope.names.push({
       first: $scope.firstname,
-      last: $scope.lastname,
-    })
-  }
+      last: $scope.lastname
+    });
+  };
 });
