@@ -25,17 +25,10 @@
             Last Name:<br>
             <input type="text" ng-model="lastname"><br><br>
             <button ng-click="update()">Update</button><br>
-            <label for="fontselect">Select Font:</label>
-<!--
-            <select name="fontselect" ng-model="myFont">
-              <option value="'font-family': 'Pacifico', cursive;">Pacifico</option>
-              <option value="'font-family': 'Open sans', sans-serif;">Open Sans</option>
-               <option value="'font-family': 'Miniver', cursive;">Miniver</option>
-               <option value="'font-family': 'Limelight', cursive;">Limelight</option>
-            </select><br>
--->
-            <select ng-model="myColor" ng-options="color for color in bgColors"></select>
-            <select ng-model="myFont" ng-options="font for font in myFonts"></select>
+            <label for="fontselect">Select Font:</label><br>
+            <select name="fontselect" ng-model="myFont" ng-options="font for font in myFonts"></select><br>
+            <label for="colorselect">Select Background color:</label><br>
+            <select name="colorselect" ng-model="myColor" ng-options="color for color in bgColors"></select>
           </form>
           <ul>
             <li ng-repeat="name in names">
