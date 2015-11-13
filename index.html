@@ -30,12 +30,18 @@
             <label for="colorselect">Select Background color:</label><br>
             <select name="colorselect" ng-model="myColor" ng-options="color for color in bgColors"></select>
           </form>
+          <h2>Preview info:</h2>
+          <h4>Name</h4>
           <ul>
             <li ng-repeat="name in names">
               <span>{{name.first}}</span>
               <p>{{name.last}}</p>
             </li>
-          </ul>
+          </ul><br>
+          <h4>Font</h4>
+          <p>{{myFont}}</p><br>
+          <h4>Background Color</h4>
+          <p>{{myColor}}</p>
         </div>
         <div id="view" ng-style="{'background-color': myColor}" class="bar-2 display">
           <div class="frame">
