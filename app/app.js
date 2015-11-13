@@ -1,10 +1,23 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('namesCtrl', function ($scope) {
+myApp.controller('NamesController', function ($scope) {
   $scope.names = [
 //    {'first': 'test',
 //    'last': 'fart',}
   ];
+  $scope.bgColors = [
+    'none',
+    'red',
+    'blue',
+    'pink',
+    '#F8F8FF'
+  ];
+  $scope.myFonts = [
+    'Open Sans',
+    'Pacifico',
+    'Miniver',
+    'Limelight'
+  ]
   $scope.update = function () {
     $scope.names.length = 0;
     $scope.names.push({
