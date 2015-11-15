@@ -5,4 +5,5 @@ body {
   height: 600px;
 /*  background-color: #B3ECFF;*/
   display: inline-block;
+  box-shadow: 10px 10px 5px #888888;
 }
