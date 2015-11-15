@@ -32,7 +32,9 @@
             <label for="fontselect">Select Font:</label><br>
             <select name="fontselect" ng-model="myFont" ng-options="font for font in myFonts"></select><br>
             <label for="colorselect">Select Background color:</label><br>
-            <select name="colorselect" ng-model="myColor" ng-options="color for color in bgColors"></select>
+            <select name="colorselect" ng-model="myBGColor" ng-options="color for color in bgColors"></select><br>
+            <label for="fontcolor">Select Font Color:</label><br>
+            <select name="fontcolor" ng-model="myFontColor" ng-options="fart for fart in myColor"></select><br>
           </form>
           <h2>Preview info:</h2>
           <h4>Name</h4>
@@ -45,11 +47,13 @@
           <h4>Font</h4>
           <p>{{myFont}}</p><br>
           <h4>Background Color</h4>
-          <p>{{myColor}}</p>
+          <p>{{myBGColor}}</p><br>
+          <h4>Font Color</h4>
+          <p>{{myFontColor}}</p><br>
         </div>
-        <div id="view" ng-style="{'background-color': myColor}" class="bar-2 display">
+        <div id="view" ng-style="{'background-color': myBGColor}" class="bar-2 display">
           <div class="frame">
-            <div class="bar-3" ng-repeat="name in names" ng-style="{'font-family': myFont}">
+            <div class="bar-3" ng-repeat="name in names" ng-style="{'font-family': myFont, 'color': myFontColor}">
               <p class="firstname">
                 {{name.first}}
               </p>

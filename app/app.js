@@ -17,7 +17,12 @@ myApp.controller('NamesController', function ($scope) {
     'Pacifico',
     'Miniver',
     'Limelight'
-  ]
+  ];
+  $scope.myColor = [
+    'gray',
+    'green',
+    '#F8F8FF'
+  ];
   $scope.update = function () {
     $scope.names.length = 0;
     $scope.names.push({
